@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lgh.aio.mapper.UserMapper">
+    <select id="login" parameterType="com.lgh.aio.entity.UserBean" resultType="com.lgh.aio.entity.UserBean">
+        select * from USER where phone=#{phone}
+    </select>
+    <insert id="register" parameterType="com.lgh.aio.entity.UserBean">
+    insert into USER(name,pwd,phone) values (#{name},#{pwd},#{phone})
+    </insert>
+</mapper>
